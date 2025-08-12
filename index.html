@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>镬炉村-维权首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C53030', // 改为更有警示性的红色作为主色调
+                        secondary: '#2D3748',
+                        light: '#F7FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 bg-white bg-opacity-90 bg-blur shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-primary font-bold text-xl">镬炉村维权</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">事件概况</a>
+                    <a href="#evidence" class="text-gray-700 hover:text-primary transition-colors">证据展示</a>
+                    <a href="#timeline" class="text-gray-700 hover:text-primary transition-colors">时间线</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系我们</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded-md">事件概况</a>
+                <a href="#evidence" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded-md">证据展示</a>
+                <a href="#timeline" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded-md">时间线</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-primary hover:text-white rounded-md">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 展示区域 -->
+    <header class="relative bg-gray-900 text-white py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://picsum.photos/id/1067/1920/1080" alt="乡村景象" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-[clamp(2rem,6vw,4rem)] font-bold mb-6 text-shadow leading-tight">
+                镬炉村-维权行动
+            </h1>
+            <p class="text-[clamp(1.2rem,3vw,1.8rem)] mb-8 text-gray-200 max-w-3xl mx-auto">
+                反对枫林镇政府暴力强拆、选择性执法
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#evidence" class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105">
+                    查看证据
+                </a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105">
+                    加入我们
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 事件概况 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">事件概况</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        2025年6月5日，枫林镇政府在未与村民达成共识、未履行合法程序的情况下，对镬炉村部分村民屋顶进行了强制拆除。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        更令人愤慨的是，政府部门存在明显的选择性执法行为：对部分村民的房屋进行强拆，却对另一些有类似情况的房屋和大棚视而不见，这种不公平的对待严重损害了政府公信力。
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        我们村民团结一心，坚决维护自身合法权益，要求政府停止违法行为，给出合理补偿方案，并对相关责任人进行问责。
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-xl transform transition-transform hover:scale-[1.02]">
+                    <img src="https://picsum.photos/id/1031/800/600" alt="乡村房屋" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心诉求 -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">我们的诉求</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg card-shadow hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-ban"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">停止强拆</h3>
+                    <p class="text-gray-600">立即停止一切非法强制拆除行为，尊重村民合法财产权</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">公正执法</h3>
+                    <p class="text-gray-600">反对选择性执法，要求一视同仁，依法处理所有违规建筑</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">合理补偿</h3>
+                    <p class="text-gray-600">对已拆除房屋给予合理补偿，制定公平透明的补偿方案</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">问责追责</h3>
+                    <p class="text-gray-600">追究相关责任人的法律责任，严肃处理违法行政行为</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 证据展示 -->
+    <section id="evidence" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">证据展示</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 证据1 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative">
+                        <img src="https://picsum.photos/id/1040/600/400" alt="强拆现场照片" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">查看大图</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">强拆现场照片</h3>
+                    <p class="text-gray-600 text-sm">2025年6月5日，枫林镇政府在未通知情况下进行强拆</p>
+                </div>
+                
+                <!-- 证据2 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative">
+                        <img src="https://picsum.photos/id/1059/600/400" alt="执法人员照片" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">查看大图</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">执法人员照片</h3>
+                    <p class="text-gray-600 text-sm">参与强拆的执法人员，未出示合法证件和手续</p>
+                </div>
+                
+                <!-- 证据3 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative">
+                        <img src="https://picsum.photos/id/1071/600/400" alt="房屋受损情况" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">查看大图</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">房屋受损情况</h3>
+                    <p class="text-gray-600 text-sm">强拆导致周边未被拆除房屋也受到不同程度损坏</p>
+                </div>
+                
+                <!-- 证据4 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative">
+                        <img src="https://picsum.photos/id/1058/600/400" alt="选择性执法证据" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">查看大图</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">选择性执法证据</h3>
+                    <p class="text-gray-600 text-sm">同区域类似建筑，部分被拆部分保留的对比</p>
+                </div>
+                
+                <!-- 证据5 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative flex items-center justify-center p-4">
+                        <div class="text-center">
+                            <i class="fa fa-file-text-o text-5xl text-gray-400 mb-3"></i>
+                            <p class="text-gray-600">政府文件复印件</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">查看文件</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">相关文件证据</h3>
+                    <p class="text-gray-600 text-sm">政府发布的拆迁文件，存在程序不合法问题</p>
+                </div>
+                
+                <!-- 证据6 -->
+                <div class="group">
+                    <div class="rounded-lg overflow-hidden mb-3 h-64 bg-gray-200 relative flex items-center justify-center p-4">
+                        <div class="text-center">
+                            <i class="fa fa-video-camera text-5xl text-gray-400 mb-3"></i>
+                            <p class="text-gray-600">现场视频记录</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-primary px-4 py-2 rounded-md font-medium">播放视频</button>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">现场视频证据</h3>
+                    <p class="text-gray-600 text-sm">强拆过程的视频记录，记录了执法人员的暴力行为</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="bg-gray-200 hover:bg-gray-300 text-secondary font-medium py-2 px-6 rounded-md transition-colors">
+                    加载更多证据 <i class="fa fa-angle-down ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 时间线 -->
+    <section id="timeline" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">事件时间线</h2>
+            
+            <div class="relative">
+                <!-- 中轴线 -->
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-300"></div>
+                
+                <!-- 时间点1 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-semibold text-secondary">&nbsp;&nbsp;不按法定程序</h3>
+                            <p class="text-gray-600 mt-2">镇政府未按《行政强制法》中法定程序，未鉴定、未事先催告、听取当事人陈述申辩等规定。</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left">
+                            <span class="inline-block bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">&nbsp;&nbsp;2025年5月29日</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 时间点2 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mb-6 md:mb-0">
+                            <span class="inline-block bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">&nbsp;&nbsp;2025年6月5日</span>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left order-2 md:order-2">
+                            <h3 class="text-xl font-semibold text-secondary">&nbsp;&nbsp;业主无人在家强拆</h3>
+                            <p class="text-gray-600 mt-2">在无正式通知、未责令限期整改、无人在家的情况下，吊车上楼暴力拆除，且在操作中导致屋内部分合法财物受损。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 时间点3 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-semibold text-secondary">&nbsp;&nbsp;再次强拆抗议标语</h3>
+                            <p class="text-gray-600 mt-2">镇政府组织人员和机械，再次强拆抗议标语，忽视民众合法维权诉求。</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left">
+                            <span class="inline-block bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">&nbsp;&nbsp;2025年6月18日</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 时间点4 -->
+                <div class="relative">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-1 mb-6 md:mb-0">
+                            <span class="inline-block bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">&nbsp;&nbsp;2025年6月~至今</span>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left order-2 md:order-2">
+                            <h3 class="text-xl font-semibold text-secondary">&nbsp;&nbsp;维权行动</h3>
+                            <p class="text-gray-600 mt-2">村民联合起来，正式启动维权行动，收集证据，寻求法律帮助，向更高一级政府部门反映情况。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">联系我们</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        如果你是镬炉村村民，或者有相关信息想要提供，请通过以下方式联系我们。我们将严格保护你的个人信息，感谢你的支持与帮助。
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mt-1 mr-4">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-secondary">联系电话</h3>
+                                <p class="text-gray-600">136-XXXX-XXXX（黄先生）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mt-1 mr-4">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-secondary">电子邮箱</h3>
+                                <p class="text-gray-600">weiquan@huolucun.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mt-1 mr-4">
+                                <i class="fa fa-weixin"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-secondary">微信公众号</h3>
+                                <p class="text-gray-600">镬炉村维权之声</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">姓名</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的姓名">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">电话</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的联系电话">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">留言内容</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您想要反映的情况或提供的证据..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition-colors">
+                            提交信息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-secondary text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4">镬炉村维权行动</h3>
+                <p class="text-gray-300 mb-6">我们坚信正义终将到来，合法权益必将得到维护</p>
+                <div class="flex justify-center space-x-4 mb-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-qq text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400 text-sm">© 2025 镬炉村维权小组 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-red-700">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动端菜单切换
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+            
+            // 导航栏滚动效果
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('shadow-md');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('shadow-md');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
